@@ -1,1 +1,18 @@
-HEllo world
+<!DOCTYPE html>
+<html><head><script type="text/javascript" src="script.js"></script>
+<title>USB Drums </title>
+<script type="module">
+// Ask for USB access
+function activateUsb() {
+  navigator.usb.
+  requestDevice({ filters: [] }).
+  then((usbDevice) => {
+    console.log('Product:' + usbDevice.productName);
+  }).
+  catch((e) => {
+    console.log('There is no device. ' + e);
+  });
+};</script>
+  
+</head><body>
+  <p><button onclick="activateUsb()">1. Activate USB </button><</body></html>
